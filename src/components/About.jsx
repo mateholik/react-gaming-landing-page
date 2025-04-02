@@ -1,9 +1,9 @@
-import { useGSAP } from "@gsap/react";
-import React from "react";
 import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+
 import AnimatedTitle from "./AnimatedTitle";
 
-import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger);
 
 const About = () => {
@@ -15,7 +15,7 @@ const About = () => {
         end: "+=800 center",
         scrub: 0.5,
         pin: true,
-        pinSpacer: true,
+        pinSpacing: true,
       },
     });
 
@@ -25,6 +25,7 @@ const About = () => {
       borderRadius: 0,
     });
   });
+
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
